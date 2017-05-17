@@ -1,0 +1,54 @@
+.main{
+    background: url('../img/header.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    z-index: -1;
+    position: absolute;
+
+    &:before{
+        display: block;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        opacity: .53;
+        background: #000000;
+    }
+
+    .header{
+        & + div{
+            margin-top: 80px;
+        }
+
+        .brand {
+            text-align: center;
+            margin-top: 155px;
+
+            h2 {
+                color: #fff;
+
+                & > span {
+                  font-size: 3rem;
+                  font-weight: 600;
+                }
+            }
+        }
+    }
+
+    a{
+        &:hover,
+        &:focus{
+            color: #fff;
+        }
+    }
+}
+
+#accordion .row + .row{
+    margin-top: 60px;
+}

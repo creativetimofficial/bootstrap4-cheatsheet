@@ -1,0 +1,142 @@
+.main {
+  background: url("../img/header.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: auto;
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+  z-index: -1;
+  position: absolute;
+}
+.main:before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: .53;
+  background: #000000;
+}
+.main .header + div {
+  margin-top: 80px;
+}
+.main .header .brand {
+  text-align: center;
+  margin-top: 155px;
+}
+.main .header .brand h2 {
+  color: #fff;
+}
+.main .header .brand h2 > span {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.main a:hover, .main a:focus {
+  color: #fff;
+}
+
+#accordion .row + .row {
+  margin-top: 60px;
+}
+
+.navbar.navbar-transparent a,
+.navbar.navbar-transparent a:hover,
+.navbar.navbar-transparent a:focus {
+  color: #fff;
+}
+
+.card.card-collapse {
+  border: none;
+  background-color: transparent;
+  border-radius: 10px;
+  transition: background-color 170ms ease-in;
+}
+.card.card-collapse.active {
+  background-color: #fff;
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.2);
+}
+.card.card-collapse.active .card-header h5 > a {
+  color: #3C4858;
+}
+.card.card-collapse.active .card-header h5 > a i {
+  opacity: 1;
+}
+.card.card-collapse .card-header {
+  padding: 0;
+  background-color: transparent;
+  border-bottom: none;
+}
+.card.card-collapse .card-header h5 > a {
+  padding: 2.3125rem 1.6875rem;
+  display: block;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: none;
+}
+.card.card-collapse .card-header h5 > a i {
+  opacity: 0;
+  float: right;
+  position: relative;
+  top: 4px;
+  color: #3C4858;
+  transition: transform 170ms ease-in, opacity 170ms ease-in;
+}
+.card.card-collapse .card-header h5 > a[aria-expanded="true"] i {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.card.card-collapse .card-header + div .card-block {
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.card.card-collapse .card-header + div .card-block ul {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+.card.card-collapse .card-header + div .card-block ul li > a {
+  padding: 5px 15px;
+  display: block;
+  color: #3C4858;
+}
+.card.card-collapse .card-header + div .card-block ul li > a:hover, .card.card-collapse .card-header + div .card-block ul li > a:focus {
+  background-color: rgba(220, 220, 220, 0.425);
+  border-radius: 4px;
+}
+.card.card-collapse .card-header + div .card-block ul li:not(:last-child) a {
+  margin-bottom: 6px;
+}
+.card.card-collapse:hover, .card.card-collapse:focus {
+  background-color: #fff;
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.2);
+}
+.card.card-collapse:hover h5 > a, .card.card-collapse:focus h5 > a {
+  color: #3C4858;
+}
+.card.card-collapse:hover h5 > a i, .card.card-collapse:focus h5 > a i {
+  color: #3C4858;
+  opacity: 1;
+}
+
+.horizontal-separator,
+.vertical-separator {
+  display: block;
+  width: 1px;
+  height: auto;
+  opacity: .2;
+  background-color: white;
+}
+
+.horizontal-separator {
+  width: 100%;
+  height: 1px;
+  margin: 20px 0;
+}
