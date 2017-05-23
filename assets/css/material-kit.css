@@ -8068,7 +8068,7 @@ select.selectpicker {
     overflow-x: hidden;
   }
 
-  .navbar-collapse {
+  /*.navbar-collapse {
     position: fixed;
     display: block;
     top: -10px;
@@ -8095,13 +8095,13 @@ select.selectpicker {
     -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-  }
-  .navbar-collapse ul {
+  }*/
+  /*.navbar-collapse ul {
     position: relative;
     z-index: 3;
     overflow-y: auto;
     height: 100%;
-  }
+  }*/
   .navbar-collapse .nav > li {
     padding-right: 15px;
   }
@@ -8116,7 +8116,7 @@ select.selectpicker {
   .navbar-collapse .nav > li:last-child:after {
     display: none;
   }
-  .navbar-collapse::after {
+  /*.navbar-collapse::after {
     top: 0;
     left: 0;
     height: 100%;
@@ -8126,7 +8126,7 @@ select.selectpicker {
     display: block;
     content: "";
     z-index: 1;
-  }
+  }*/
 
   .navbar.navbar-transparent .navbar-toggle .icon-bar {
     color: #FFFFFF;
@@ -8140,15 +8140,15 @@ select.selectpicker {
   .navbar .navbar-collapse .nav > li {
     padding: 0;
   }
-  .navbar .navbar-collapse .navbar-nav {
+  /*.navbar .navbar-collapse .navbar-nav {
     margin-top: 0;
-  }
+  }*/
   .navbar .navbar-collapse .navbar-nav > li > a {
-    color: #3C4858;
-    margin: 5px 15px;
+    /*color: #3C4858;*/
+    /*margin: 5px 15px;*/
   }
   .navbar .navbar-collapse .navbar-nav > li > a:hover, .navbar .navbar-collapse .navbar-nav > li > a:focus {
-    color: #3C4858;
+    /*color: #3C4858;*/
   }
   .navbar .navbar-collapse .navbar-nav > li.button-container > a {
     margin: 15px;
@@ -8175,7 +8175,7 @@ select.selectpicker {
     display: none;
   }
 
-  nav .container {
+  /*nav .container {
     -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
@@ -8200,7 +8200,7 @@ select.selectpicker {
     -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-  }
+  }*/
 
   .features-5 .container [class*="col-"] {
     border-right: 0;
