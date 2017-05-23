@@ -23,28 +23,39 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-toggleable-md bg-white fixed-top navbar-transparent">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
     	<div class="container">
-			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-		   		<span class="navbar-toggler-bar bar1"></span>
-				<span class="navbar-toggler-bar bar2"></span>
-				<span class="navbar-toggler-bar bar3"></span>
-		 	</button>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   				<span class="navbar-toggler-icon"></span>
+ 			</button>
 
-			<a class="navbar-brand" href="http://www.creative-tim.com">
-				Creative Tim
+			<a class="navbar-brand" href="http://bootstrapbay.com/">
+				BootstrapBay
 			</a>
 
-    	    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+    	    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul  class="navbar-nav">
-                    <li class="nav-item">
+                    <li class="nav-item text-center">
                         <a class="nav-link" href="https://github.com/timcreative/material-kit/issues">Have an issue?</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://demos.creative-tim.com/material-kit-pro/presentation.html?ref=utp-freebie" target="_blank">
-                            <i class="material-icons">unarchive</i> Upgrade to PRO
-                        </a>
-                    </li>
+					<li class="nav-item text-center">
+						<a class="nav-link twitter-sharrre-nav" rel="tooltip" title="Tweet" data-placement="bottom" href="#pablo">
+							<i class="fa fa-twitter"></i>
+							<p class="hidden-lg-up">Twitter</p>
+						</a>
+					</li>
+					<li class="nav-item text-center">
+						<a class="nav-link facebook-sharrre-nav" rel="tooltip" title="Share" data-placement="bottom" href="#pablo">
+							<i class="fa fa-facebook-square"></i>
+							<p class="hidden-lg-up">Facebook</p>
+						</a>
+					</li>
+					<li class="nav-item text-center">
+						<a class="nav-link linkedin-sharrre-nav" rel="tooltip" title="Share" data-placement="bottom" href="#pablo">
+							<i class="fa fa-linkedin"></i>
+							<p class="hidden-lg-up">LinkedIn</p>
+						</a>
+					</li>
                 </ul>
     	    </div>
     	</div>
@@ -58,10 +69,15 @@
                     <div class="col-md-8 offset-md-2">
                         <div class="brand">
                             <h2>
-                                <span>Bootstrap 4 CheatSheet</span>
-                                <br>
-                                by BootstrapBay
+                        		Bootstrap 4 CheatSheet
                             </h2>
+
+							<input type="text" id="filter" name="keyword" placeholder="Search..">
+
+							<div class="btn-container">
+								<button class="btn btn-default" id="expand-all">Expand All</button>
+								<button class="btn btn-default" id="new">Highlight new in v4</button>
+							</div>
                         </div>
                     </div>
                 </div>
@@ -71,39 +87,57 @@
         <div id="accordion" role="tablist" aria-multiselectable="true">
             <div class="container">
                 <div class="row">
-
-                    <div class="col">
+					<div class="col-md-3" id="col1">
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="Alerts">
 						    <h5 class="mb-0">
-						      <a class="collapsed" data-toggle="collapse" data-target="#collapseAlerts" href="#collapseAlerts" aria-expanded="false" aria-controls="collapseAlerts">
-						        Alerts
-						        <i class="material-icons">keyboard_arrow_down</i>
+						      	<a class="collapsed" data-toggle="collapse" data-target="#collapseAlerts" href="#collapseAlerts" aria-expanded="false" aria-controls="collapseAlerts">
+									<div class="jcorgFilterTextChild">Alerts</div>
+						        	<i class="material-icons">keyboard_arrow_down</i>
 						      </a>
 						    </h5>
 						  </div>
 						  <div id="collapseAlerts" class="collapse" role="tabpanel" aria-labelledby="Alerts">
 						    <div class="card-block">
 						        <ul>
-						          <li><a href="#ceva">alert-success</a></li>
-						          <li><a href="#ceva">alert-info</a></li>
-						          <li><a href="#ceva">alert-warning</a></li>
-						          <li><a href="#ceva">alert-danger</a></li>
+						          	<li>
+										<a href="#ceva">alert-success</a>
+<div class="html-code"><div class="alert alert-success" role="alert">
+<strong>Well done!</strong> You successfully read this important alert message.</div>
+</div>
+									</li>
+						          	<li>
+										<a href="#ceva">alert-info</a>
+<div class="html-code"><div class="alert alert-info" role="alert">
+<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+</div></div>
+									</li>
+						          	<li>
+									  	<a href="#ceva">alert-warning</a>
+<div class="html-code">
+<div class="alert alert-warning" role="alert">
+<strong>Warning!</strong> Better check yourself, you're not looking too good.
+</div></div>
+									</li>
+						          	<li>
+									  	<a href="#ceva">alert-danger</a>
+<div class="html-code"><div class="alert alert-danger" role="alert">
+<strong>Oh snap!</strong> Change a few things up and try submitting again.
+</div></div>
+								  	</li>
 						          <li><a href="#ceva">alert-link</a></li>
 						          <li><a href="#ceva">alert-dismissible</a></li>
-						          <li><a href="#ceva">alert-heading</a></li>
+						          <li class="bootstrap4-new"><a href="#ceva">alert-heading</a></li>
 						        </ul>
 						    </div>
 						  </div>
 						</div>
 
-							<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="Badge">
 						    <h5 class="mb-0">
 						      <a class="collapsed" data-toggle="collapse" data-target="#collapseBadge" href="#collapseBadge" aria-expanded="false" aria-controls="collapseBadge">
-						        Badge
+						        <div class="jcorgFilterTextChild">Badge</div>
 						        <i class="material-icons">keyboard_arrow_down</i>
 						      </a>
 						    </h5>
@@ -111,7 +145,10 @@
 						  <div id="collapseBadge" class="collapse" role="tabpanel" aria-labelledby="Badge">
 						    <div class="card-block">
 						        <ul>
-						          <li><a href="#ceva">badge-default</a></li>
+						          <li><a href="#ceva">
+									   <div class="jcorgFilterTextChild">badge-default</div>
+									   </a>
+								  </li>
 						          <li><a href="#ceva">badge-pill</a></li>
 						          <li><a href="#ceva">badge-primary</a></li>
 						          <li><a href="#ceva">badge-success</a></li>
@@ -123,13 +160,11 @@
 						  </div>
 						</div>
 
-							<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="Breadcrumb">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapseBreadcrumb" href="#collapseBreadcrumb" aria-expanded="false" aria-controls="collapseBreadcrumb">
-								Breadcrumb
+							    <div class="jcorgFilterTextChild">Breadcrumb</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -143,13 +178,11 @@
 						  </div>
 						</div>
 
-						<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="Buttons">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapseButtons" href="#collapseButtons" aria-expanded="false" aria-controls="collapseButtons">
-								Buttons
+								<div class="jcorgFilterTextChild">Buttons</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -175,13 +208,11 @@
 						  </div>
 						</div>
 
-						<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="ButtonGroups">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapseButtonGroups" href="#collapseButtonGroups" aria-expanded="false" aria-controls="collapseButtonGroups">
-								Buttons Group
+								<div class="jcorgFilterTextChild">Buttons Group</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -194,19 +225,17 @@
 								  <li><a href="#ceva">btn-group-sm</a></li>
 								  <li><a href="#ceva">btn-group-vertical</a></li>
 								  <li><a href="#ceva">btn-group (nested)</a></li>
-								  <li><a href="#ceva">btn-toolbar/a></li>
+								  <li><a href="#ceva">btn-toolbar</a></li>
 				   				</ul>
 							</div>
 						  </div>
 						</div>
 
-						<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="ButtonModifiers">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapseButtonModifiers" href="#collapseButtonModifiers" aria-expanded="false" aria-controls="collapseButtonModifiers">
-								Button Modifiers
+								<div class="jcorgFilterTextChild">Button Modifiers</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -227,13 +256,11 @@
 						  </div>
 						</div>
 
-						<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="Cards">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapseCards" href="#collapseCards" aria-expanded="false" aria-controls="collapseCards">
-								Cards
+								<div class="jcorgFilterTextChild">Cards</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -273,19 +300,14 @@
 							</div>
 						  </div>
 						</div>
-
-						<div class="horizontal-separator"></div>
-
                     </div>
 
-					<div class="vertical-separator"></div>
-
-                    <div class="col">
+					<div class="col-md-3" id="col2">
 						<div class="card card-collapse">
                           <div class="card-header" role="tab" id="Carousel">
                             <h5 class="mb-0">
                               <a data-toggle="collapse" data-target="#collapseCarousel" href="#collapseCarousel" aria-expanded="true" aria-controls="collapseCarousel">
-                                  Carousel
+                                  <div class="jcorgFilterTextChild">Carousel</div>
                                   <i class="material-icons">keyboard_arrow_down</i>
                               </a>
                             </h5>
@@ -302,13 +324,11 @@
                           </div>
 					  </div>
 
-						<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
                           <div class="card-header" role="tab" id="Collapse">
                             <h5 class="mb-0">
                               <a class="collapsed" data-toggle="collapse" data-target="#collapseCollapse" href="#collapseCollapse" aria-expanded="false" aria-controls="collapseCollapse">
-                                Collapse
+                                <div class="jcorgFilterTextChild">Collapse</div>
                                 <i class="material-icons">keyboard_arrow_down</i>
                               </a>
                             </h5>
@@ -316,20 +336,33 @@
                           <div id="collapseCollapse" class="collapse" role="tabpanel" aria-labelledby="Collapse">
                             <div class="card-block">
                               	<ul>
-                              	   	<li><a href="#ceva">Collapse</a></li>
+                              	   	<li>
+										<a href="#ceva">Collapse</a>
+<div class="html-code"><p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-block">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
+</div><script>$('.collapse').collapse()</script></div>
+									</li>
 								   	<li><a href="#ceva">Accordion</a></li>
                               	</ul>
                             </div>
                           </div>
                         </div>
 
-							<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="Dropdowns">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapseDropdowns" href="#collapseDropdowns" aria-expanded="false" aria-controls="collapseDropdowns">
-								Dropdowns
+								<div class="jcorgFilterTextChild">Dropdowns</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -351,13 +384,11 @@
 						  </div>
 						</div>
 
-						<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="Forms">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapseForms" href="#collapseForms" aria-expanded="false" aria-controls="collapseForms">
-								Forms
+								<div class="jcorgFilterTextChild">Forms</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -381,13 +412,11 @@
 						  </div>
 						</div>
 
-						<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="FormModifiers">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapseFormModifiers" href="#collapseFormModifiers" aria-expanded="false" aria-controls="collapseFormModifiers">
-								Form Modifiers
+								<div class="jcorgFilterTextChild">Form Modifiers</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -405,13 +434,11 @@
 						  </div>
 						</div>
 
-						<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="FormInputGroups">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapseFormInputGroups" href="#collapseFormInputGroups" aria-expanded="false" aria-controls="collapseFormInputGroups">
-								Form Input Groups
+								<div class="jcorgFilterTextChild">Form Input Groups</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -432,13 +459,11 @@
 						  </div>
 						</div>
 
-						<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="CustomForms">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapseCustomForms" href="#collapseCustomForms" aria-expanded="false" aria-controls="collapseCustomForms">
-								Custom Forms
+								<div class="jcorgFilterTextChild">Custom Forms</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -456,13 +481,11 @@
 						  </div>
 						</div>
 
-						<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="Grid">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapseGrid" href="#collapseGrid" aria-expanded="false" aria-controls="collapseGrid">
-								Grid
+								<div class="jcorgFilterTextChild">Grid</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -490,13 +513,11 @@
 						  </div>
 						</div>
 
-						<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="Images">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapseImages" href="#collapseImages" aria-expanded="false" aria-controls="collapseImages">
-								Images
+								<div class="jcorgFilterTextChild">Images</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -511,13 +532,11 @@
 						  </div>
 						</div>
 
-						<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="Jumbotron">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapseJumbotron" href="#collapseJumbotron" aria-expanded="false" aria-controls="collapseJumbotron">
-								Jumbotron
+								<div class="jcorgFilterTextChild">Jumbotron</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -531,29 +550,22 @@
 							</div>
 						  </div>
 						</div>
+					</div>
 
-						<div class="horizontal-separator"></div>
-
-
-                    </div>
-
-
-					<div class="vertical-separator"></div>
-
-                    <div class="col">
-                        <div class="card card-collapse">
-                          <div class="card-header" role="tab" id="ListGroup">
-                            <h5 class="mb-0">
-                              <a class="collapsed" data-toggle="collapse" data-target="#collapseListGroup" href="#collapseListGroup" aria-expanded="false" aria-controls="collapseListGroup">
-                                List Group
-                                <i class="material-icons">keyboard_arrow_down</i>
-                              </a>
-                            </h5>
-                          </div>
-                          <div id="collapseListGroup" class="collapse" role="tabpanel" aria-labelledby="ListGroup">
-                            <div class="card-block">
+					<div class="col-md-3" id="col3">
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="ListGroup">
+							<h5 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseListGroup" href="#collapseListGroup" aria-expanded="false" aria-controls="collapseListGroup">
+								<div class="jcorgFilterTextChild">List Group</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+							</h5>
+						  </div>
+						  <div id="collapseListGroup" class="collapse" role="tabpanel" aria-labelledby="ListGroup">
+							<div class="card-block">
 								<ul>
-  								  <li><a href="#ceva">list-group</a></li>
+								  <li><a href="#ceva">list-group</a></li>
 								  <li><a href="#ceva">list-group-item active</a></li>
 								  <li><a href="#ceva">list-group-item disabled</a></li>
 								  <li><a href="#ceva">list-group-item-action</a></li>
@@ -563,43 +575,39 @@
 								  <li><a href="#ceva">list-group-item-danger</a></li>
 								  <li><a href="#ceva">list-group with badges</a></li>
 								  <li><a href="#ceva">list-group with d-flex</a></li>
-  							  	</ul>
-                            </div>
-                          </div>
-                        </div>
-
-						<div class="horizontal-separator"></div>
+								</ul>
+							</div>
+						  </div>
+						</div>
 
 						<div class="card card-collapse">
-                          <div class="card-header" role="tab" id="MediaObjects">
-                            <h5 class="mb-0">
-                              <a class="collapsed" data-toggle="collapse" data-target="#collapseMediaObjects" href="#collapseMediaObjects" aria-expanded="false" aria-controls="collapseMediaObjects">
-                                Media Objects
-                                <i class="material-icons">keyboard_arrow_down</i>
-                              </a>
-                            </h5>
-                          </div>
-                          <div id="collapseMediaObjects" class="collapse" role="tabpanel" aria-labelledby="MediaObjects">
-                            <div class="card-block">
+						  <div class="card-header" role="tab" id="MediaObjects">
+							<h5 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseMediaObjects" href="#collapseMediaObjects" aria-expanded="false" aria-controls="collapseMediaObjects">
+								<div class="jcorgFilterTextChild">Media Objects</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+							</h5>
+						  </div>
+						  <div id="collapseMediaObjects" class="collapse" role="tabpanel" aria-labelledby="MediaObjects">
+							<div class="card-block">
 								<ul>
-  								  <li><a href="#ceva">media</a></li>
+								  <li><a href="#ceva">media</a></li>
 								  <li><a href="#ceva">nested media</a></li>
 								  <li><a href="#ceva">d-flex align-self-start</a></li>
 								  <li><a href="#ceva">d-flex align-self-center</a></li>
 								  <li><a href="#ceva">d-flex align-self-end</a></li>
 								  <li><a href="#ceva">right aligned media</a></li>
-  							  	</ul>
-                            </div>
-                          </div>
-                        </div>
-
-						<div class="horizontal-separator"></div>
+								</ul>
+							</div>
+						  </div>
+						</div>
 
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="Modal">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapseModal" href="#collapseModal" aria-expanded="false" aria-controls="collapseModal">
-								Modal
+								<div class="jcorgFilterTextChild">Modal</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -615,13 +623,11 @@
 						  </div>
 						</div>
 
-						<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="Navs">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapseNavs" href="#collapseNavs" aria-expanded="false" aria-controls="collapseNavs">
-								Navs
+								<div class="jcorgFilterTextChild">Navs</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -640,18 +646,16 @@
 								  <li><a href="#ceva">nav with flex utils </a></li>
 								  <li><a href="#ceva">nav-tabs with dropdown</a></li>
 								  <li><a href="#ceva">nav-pills with dropdown</a></li>
-							  	</ul>
+								</ul>
 							</div>
 						  </div>
 						</div>
-
-						<div class="horizontal-separator"></div>
 
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="Pagination">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapsePagination" href="#collapsePagination" aria-expanded="false" aria-controls="collapsePagination">
-								Pagination
+								<div class="jcorgFilterTextChild">Pagination</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -669,13 +673,11 @@
 						  </div>
 						</div>
 
-						<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="Popover">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapsePopover" href="#collapsePopover" aria-expanded="false" aria-controls="collapsePopover">
-								Popover
+								<div class="jcorgFilterTextChild">Popover</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -690,13 +692,11 @@
 						  </div>
 						</div>
 
-						<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="Progress">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapseProgress" href="#collapseProgress" aria-expanded="false" aria-controls="collapseProgress">
-								Progress
+								<div class="jcorgFilterTextChild">Progress</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -718,13 +718,11 @@
 						  </div>
 						</div>
 
-						<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="ResponsiveUtilities">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapseResponsiveUtilities" href="#collapseResponsiveUtilities" aria-expanded="false" aria-controls="collapseResponsiveUtilities">
-								Responsive Utilities
+								<div class="jcorgFilterTextChild">Responsive Utilities</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -742,20 +740,14 @@
 							</div>
 						  </div>
 						</div>
-
-						<div class="horizontal-separator"></div>
-
 					</div>
 
-					<div class="vertical-separator"></div>
-
-                    <div class="col">
-
+					<div class="col-md-3" id="col4">
 						<div class="card card-collapse">
                           <div class="card-header" role="tab" id="Scrollspy">
                             <h5 class="mb-0">
                               <a class="collapsed" data-toggle="collapse" data-target="#collapseScrollspy" href="#collapseScrollspy" aria-expanded="false" aria-controls="collapseScrollspy">
-                                Scrollspy
+                                <div class="jcorgFilterTextChild">Scrollspy</div>
                                 <i class="material-icons">keyboard_arrow_down</i>
                               </a>
                             </h5>
@@ -769,13 +761,11 @@
                           </div>
                         </div>
 
-						<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
                           <div class="card-header" role="tab" id="Tables">
                             <h5 class="mb-0">
                               <a class="collapsed" data-toggle="collapse" data-target="#collapseTables" href="#collapseTables" aria-expanded="false" aria-controls="collapseTables">
-                                Tables
+                                <div class="jcorgFilterTextChild">Tables</div>
                                 <i class="material-icons">keyboard_arrow_down</i>
                               </a>
                             </h5>
@@ -803,13 +793,11 @@
                           </div>
                         </div>
 
-						<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
                           <div class="card-header" role="tab" id="Tooltips">
                             <h5 class="mb-0">
                               <a class="collapsed" data-toggle="collapse" data-target="#collapseTooltips" href="#collapseTooltips" aria-expanded="false" aria-controls="collapseTooltips">
-                                Tooltips
+                                <div class="jcorgFilterTextChild">Tooltips</div>
                                 <i class="material-icons">keyboard_arrow_down</i>
                               </a>
                             </h5>
@@ -823,13 +811,11 @@
                           </div>
                         </div>
 
-						<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="Typography">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapseTypography" href="#collapseTypography" aria-expanded="false" aria-controls="collapseTypography">
-								Typography
+								<div class="jcorgFilterTextChild">Typography</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -850,13 +836,11 @@
 						  </div>
 						</div>
 
-						<div class="horizontal-separator"></div>
-
 						<div class="card card-collapse">
 						  <div class="card-header" role="tab" id="UtilityClasses">
 							<h5 class="mb-0">
 							  <a class="collapsed" data-toggle="collapse" data-target="#collapseUtilityClasses" href="#collapseUtilityClasses" aria-expanded="false" aria-controls="collapseUtilityClasses">
-								Utility Classes
+								<div class="jcorgFilterTextChild">Utility Classes</div>
 								<i class="material-icons">keyboard_arrow_down</i>
 							  </a>
 							</h5>
@@ -913,13 +897,55 @@
 							</div>
 						  </div>
 						</div>
-
-						<div class="horizontal-separator"></div>
-
-                    </div>
-                </div>
-            </div>
+					</div>
+            	</div>
+			</div>
         </div>
+
+		<div class="container-editor">
+			<i class="material-icons" id="close">clear</i>
+			<div class="editor-left">
+				<h5>Code Snippet</h5>
+				<div id="editor"></div>
+			</div>
+
+			<div class="return-right">
+				<h5>Preview</h5>
+				<div id="return"></div>
+			</div>
+		</div>
+
+		<footer class="footer">
+		    <div class="container">
+		        <nav>
+		            <ul>
+		                <li>
+		                    <a href="https://www.creative-tim.com">
+		                        Creative Tim
+		                    </a>
+		                </li>
+		                <li>
+		                    <a href="http://presentation.creative-tim.com">
+		                       About Us
+		                    </a>
+		                </li>
+		                <li>
+		                    <a href="http://blog.creative-tim.com">
+		                       Blog
+		                    </a>
+		                </li>
+		                <li>
+		                    <a href="https://github.com/creativetimofficial/now-ui-kit/blob/master/LICENSE.md">
+		                        MIT License
+		                    </a>
+		                </li>
+		            </ul>
+		        </nav>
+		        <div class="copyright">
+		            &copy; <script>document.write(new Date().getFullYear())</script>, Designed by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>. Coded by <a href="http://bootstrapbay.com" target="_blank">Bootstrapbay</a>.
+		        </div>
+		    </div>
+		</footer>
     </div>
 </body>
 	<!--   Core JS Files   -->
@@ -928,8 +954,14 @@
 	<script src="assets/js/core/bootstrap.min.js" type="text/javascript"></script>
 
     <script src="assets/js/material.min.js" type="text/javascript"></script>
-
+	<script src="https://ajaxorg.github.io/ace-builds/src/ace.js"></script>
 
 	<!--  Plugin for the Wizard -->
 	<script src="assets/js/bs4-cheatsheet.js"></script>
+
+	<!-- Plugin for Search -->
+	<script src="assets/js/plugins/jcfilter.min.js"></script>
+
+	<!-- Share Library etc -->
+	<script src="assets/js/plugins/jquery.sharrre.js" type="text/javascript"></script>
 </html>

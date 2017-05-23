@@ -1,0 +1,918 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Bootstrap 4 CheatSheet by BootstrapBay</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" />
+	<link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+	<!-- CSS Files -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/material-kit.css" rel="stylesheet" />
+	<link href="assets/css/bs4-cheatsheet.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <nav class="navbar navbar-toggleable-md bg-white fixed-top navbar-transparent">
+    	<div class="container">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+		   		<span class="navbar-toggler-bar bar1"></span>
+				<span class="navbar-toggler-bar bar2"></span>
+				<span class="navbar-toggler-bar bar3"></span>
+		 	</button>
+
+			<a class="navbar-brand" href="http://bootstrapbay.com/">
+				BootstrapBay
+			</a>
+
+    	    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                <ul  class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/timcreative/material-kit/issues">Have an issue?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://demos.creative-tim.com/material-kit-pro/presentation.html?ref=utp-freebie" target="_blank">
+                            <i class="material-icons">unarchive</i> Upgrade to PRO
+                        </a>
+                    </li>
+                </ul>
+    	    </div>
+    	</div>
+    </nav>
+    <!-- End Navbar -->
+
+    <div class="main">
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="brand">
+                            <h2>
+                        		Bootstrap 4 CheatSheet
+                            </h2>
+							 <input type="text" id="filter" name="keyword">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		<div id="accordion" role="tablist" aria-multiselectable="true">
+			<div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Alerts">
+						<h5 class="mb-0">
+							<a class="collapsed" data-toggle="collapse" data-target="#collapseAlerts" href="#collapseAlerts" aria-expanded="false" aria-controls="collapseAlerts">
+								<div class="jcorgFilterTextChild">Alerts</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseAlerts" class="collapse" role="tabpanel" aria-labelledby="Alerts">
+						<div class="card-block">
+							<ul>
+							  <li><a href="#ceva">alert-success</a></li>
+							  <li><a href="#ceva">alert-info</a></li>
+							  <li><a href="#ceva">alert-warning</a></li>
+							  <li><a href="#ceva">alert-danger</a></li>
+							  <li><a href="#ceva">alert-link</a></li>
+							  <li><a href="#ceva">alert-dismissible</a></li>
+							  <li><a href="#ceva">alert-heading</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Badge">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseBadge" href="#collapseBadge" aria-expanded="false" aria-controls="collapseBadge">
+							<div class="jcorgFilterTextChild">Badge</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseBadge" class="collapse" role="tabpanel" aria-labelledby="Badge">
+						<div class="card-block">
+							<ul>
+							  <li><a href="#ceva">
+								   <div class="jcorgFilterTextChild">badge-default</div>
+								   </a>
+							  </li>
+							  <li><a href="#ceva">badge-pill</a></li>
+							  <li><a href="#ceva">badge-primary</a></li>
+							  <li><a href="#ceva">badge-success</a></li>
+							  <li><a href="#ceva">badge-info</a></li>
+							  <li><a href="#ceva">badge-warning</a></li>
+							  <li><a href="#ceva">badge-danger</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Breadcrumb">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseBreadcrumb" href="#collapseBreadcrumb" aria-expanded="false" aria-controls="collapseBreadcrumb">
+							<div class="jcorgFilterTextChild">Breadcrumb</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseBreadcrumb" class="collapse" role="tabpanel" aria-labelledby="Badge">
+						<div class="card-block">
+							<ul>
+							  <li><a href="#ceva">breadcrumb</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Buttons">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseButtons" href="#collapseButtons" aria-expanded="false" aria-controls="collapseButtons">
+							<div class="jcorgFilterTextChild">Buttons</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseButtons" class="collapse" role="tabpanel" aria-labelledby="Buttons">
+						<div class="card-block">
+							<ul>
+							  <li><a href="#ceva">btn-primary</a></li>
+							  <li><a href="#ceva">btn-secondary</a></li>
+							  <li><a href="#ceva">btn-success</a></li>
+							  <li><a href="#ceva">btn-info</a></li>
+							  <li><a href="#ceva">btn-warning</a></li>
+							  <li><a href="#ceva">btn-danger</a></li>
+							  <li><a href="#ceva">btn-link</a></li>
+							  <li><a href="#ceva">btn-outline-primary</a></li>
+							  <li><a href="#ceva">btn-outline-secondary</a></li>
+							  <li><a href="#ceva">btn-outline-sucess</a></li>
+							  <li><a href="#ceva">btn-outline-info</a></li>
+							  <li><a href="#ceva">btn-outline-warning</a></li>
+							  <li><a href="#ceva">btn-outline-danger</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+						<div class="card-header" role="tab" id="ButtonGroups">
+							<h5 class="mb-0">
+								<a class="collapsed" data-toggle="collapse" data-target="#collapseButtonGroups" href="#collapseButtonGroups" aria-expanded="false" aria-controls="collapseButtonGroups">
+									<div class="jcorgFilterTextChild">Buttons Group</div>
+									<i class="material-icons">keyboard_arrow_down</i>
+								</a>
+							</h5>
+						</div>
+						<div id="collapseButtonGroups" class="collapse" role="tabpanel" aria-labelledby="ButtonGroups">
+							<div class="card-block">
+								<ul>
+									<li><a href="#ceva">btn-group</a></li>
+									<li><a href="#ceva">btn-group-lg</a></li>
+									<li><a href="#ceva">btn-group-sm</a></li>
+									<li><a href="#ceva">btn-group-vertical</a></li>
+									<li><a href="#ceva">btn-group (nested)</a></li>
+									<li><a href="#ceva">btn-toolbar</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="ButtonModifiers">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseButtonModifiers" href="#collapseButtonModifiers" aria-expanded="false" aria-controls="collapseButtonModifiers">
+							<div class="jcorgFilterTextChild">Button Modifiers</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseButtonModifiers" class="collapse" role="tabpanel" aria-labelledby="ButtonModifiers">
+						<div class="card-block">
+							<ul>
+							  <li><a href="#ceva">btn-lg</a></li>
+							  <li><a href="#ceva">btn-sm</a></li>
+							  <li><a href="#ceva">btn-block</a></li>
+							  <li><a href="#ceva">active button</a></li>
+							  <li><a href="#ceva">disabled button</a></li>
+							  <li><a href="#ceva">data-toggle</a></li>
+							  <li><a href="#ceva">checkbox as button</a></li>
+							  <li><a href="#ceva">radio as button</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Cards">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseCards" href="#collapseCards" aria-expanded="false" aria-controls="collapseCards">
+							<div class="jcorgFilterTextChild">Cards</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseCards" class="collapse" role="tabpanel" aria-labelledby="Cards">
+						<div class="card-block">
+							<ul>
+							  <li><a href="#ceva">card</a></li>
+							  <li><a href="#ceva">card-block</a></li>
+							  <li><a href="#ceva">card-title</a></li>
+							  <li><a href="#ceva">card-subtitle</a></li>
+							  <li><a href="#ceva">card-text</a></li>
+							  <li><a href="#ceva">card-link</a></li>
+							  <li><a href="#ceva">card-img-top</a></li>
+							  <li><a href="#ceva">card-img-bottom</a></li>
+							  <li><a href="#ceva">card-img-overlay</a></li>
+							  <li><a href="#ceva">middle image</a></li>
+							  <li><a href="#ceva">list-group</a></li>
+							  <li><a href="#ceva">card-header</a></li>
+							  <li><a href="#ceva">h*.cardheader</a></li>
+							  <li><a href="#ceva">card-footer</a></li>
+							  <li><a href="#ceva">card-inverse</a></li>
+							  <li><a href="#ceva">card-primary</a></li>
+							  <li><a href="#ceva">card-success</a></li>
+							  <li><a href="#ceva">card-warning</a></li>
+							  <li><a href="#ceva">card-danger</a></li>
+							  <li><a href="#ceva">card-outline-primary</a></li>
+							  <li><a href="#ceva">card-outline-secondary</a></li>
+							  <li><a href="#ceva">card-outline-success</a></li>
+							  <li><a href="#ceva">card-outline-info</a></li>
+							  <li><a href="#ceva">card-outline-warning</a></li>
+							  <li><a href="#ceva">card-outline-danger</a></li>
+							  <li><a href="#ceva">card-group</a></li>
+							  <li><a href="#ceva">card-deck</a></li>
+							  <li><a href="#ceva">card-collumns</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Carousel">
+						<h5 class="mb-0">
+						  <a data-toggle="collapse" data-target="#collapseCarousel" href="#collapseCarousel" aria-expanded="false" aria-controls="collapseCarousel">
+							  <div class="jcorgFilterTextChild">Carousel</div>
+							  <i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+
+					  <div id="collapseCarousel" class="collapse" role="tabpanel" aria-labelledby="Carousel">
+						<div class="card-block">
+							<ul>
+								<li><a href="#ceva">Carousel slide</a></li>
+								<li><a href="#ceva">Carousel-indicators</a></li>
+								<li><a href="#ceva">Carousel-caption</a></li>
+							</ul>
+						</div>
+					  </div>
+				  </div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Collapse">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseCollapse" href="#collapseCollapse" aria-expanded="false" aria-controls="collapseCollapse">
+							<div class="jcorgFilterTextChild">Collapse</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseCollapse" class="collapse" role="tabpanel" aria-labelledby="Collapse">
+						<div class="card-block">
+							<ul>
+								<li><a href="#ceva">Collapse</a></li>
+								<li><a href="#ceva">Accordion</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Dropdowns">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseDropdowns" href="#collapseDropdowns" aria-expanded="false" aria-controls="collapseDropdowns">
+							<div class="jcorgFilterTextChild">Dropdowns</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseDropdowns" class="collapse" role="tabpanel" aria-labelledby="Dropdowns">
+						<div class="card-block">
+							<ul>
+								<li><a href="#ceva">dropdown</a></li>
+								<li><a href="#ceva">dropdown (split)</a></li>
+								<li><a href="#ceva">dropup</a></li>
+								<li><a href="#ceva">dropup (split)</a></li>
+								<li><a href="#ceva">dropdown shadow</a></li>
+								<li><a href="#ceva">dropdown-header</a></li>
+								<li><a href="#ceva">dropdown-divider</a></li>
+								<li><a href="#ceva">dropdown-item disabled</a></li>
+								<li><a href="#ceva">dropdown-menu-right</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Forms">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseForms" href="#collapseForms" aria-expanded="false" aria-controls="collapseForms">
+							<div class="jcorgFilterTextChild">Forms</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseForms" class="collapse" role="tabpanel" aria-labelledby="Forms">
+						<div class="card-block">
+							<ul>
+								<li><a href="#ceva">form-group</a></li>
+								<li><a href="#ceva">form-inline</a></li>
+								<li><a href="#ceva">form using the grid</a></li>
+								<li><a href="#ceva">form-control</a></li>
+								<li><a href="#ceva">form-control-file</a></li>
+								<li><a href="#ceva">form-check</a></li>
+								<li><a href="#ceva">form-check-inline</a></li>
+								<li><a href="#ceva">radio</a></li>
+								<li><a href="#ceva">checkbox</a></li>
+								<li><a href="#ceva">disabled items</a></li>
+								<li><a href="#ceva">readonly</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="FormModifiers">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseFormModifiers" href="#collapseFormModifiers" aria-expanded="false" aria-controls="collapseFormModifiers">
+							<div class="jcorgFilterTextChild">Form Modifiers</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseFormModifiers" class="collapse" role="tabpanel" aria-labelledby="FormModifiers">
+						<div class="card-block">
+							<ul>
+								<li><a href="#ceva">form-control-lg</a></li>
+								<li><a href="#ceva">form-control-sm</a></li>
+								<li><a href="#ceva">has-success</a></li>
+								<li><a href="#ceva">has-warning</a></li>
+								<li><a href="#ceva">has-danger</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="FormInputGroups">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseFormInputGroups" href="#collapseFormInputGroups" aria-expanded="false" aria-controls="collapseFormInputGroups">
+							<div class="jcorgFilterTextChild">Form Input Groups</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseFormInputGroups" class="collapse" role="tabpanel" aria-labelledby="FormInputGroups">
+						<div class="card-block">
+							<ul>
+								<li><a href="#ceva">input-group</a></li>
+								<li><a href="#ceva">input-group-lg</a></li>
+								<li><a href="#ceva">multiple addons</a></li>
+								<li><a href="#ceva">checkbox</a></li>
+								<li><a href="#ceva">radio</a></li>
+								<li><a href="#ceva">input-group-btn</a></li>
+								<li><a href="#ceva">dropdown</a></li>
+								<li><a href="#ceva">segmented buttons</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="CustomForms">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseCustomForms" href="#collapseCustomForms" aria-expanded="false" aria-controls="collapseCustomForms">
+							<div class="jcorgFilterTextChild">Custom Forms</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseCustomForms" class="collapse" role="tabpanel" aria-labelledby="CustomForms">
+						<div class="card-block">
+							<ul>
+								<li><a href="#ceva">custom-checkbox</a></li>
+								<li><a href="#ceva">custom-radio</a></li>
+								<li><a href="#ceva">custom-controls-stacked</a></li>
+								<li><a href="#ceva">custom-select</a></li>
+								<li><a href="#ceva">custom-file</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Grid">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseGrid" href="#collapseGrid" aria-expanded="false" aria-controls="collapseGrid">
+							<div class="jcorgFilterTextChild">Grid</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseGrid" class="collapse" role="tabpanel" aria-labelledby="Grid">
+						<div class="card-block">
+							<ul>
+								<li><a href="#ceva">container</a></li>
+								<li><a href="#ceva">container-fluid</a></li>
+								<li><a href="#ceva">row</a></li>
+								<li><a href="#ceva">col < 576px</a></li>
+								<li><a href="#ceva">col sm > 576px </a></li>
+								<li><a href="#ceva">col < 576px</a></li>
+								<li><a href="#ceva">col md > 768px </a></li>
+								<li><a href="#ceva">col - lg 992px</a></li>
+								<li><a href="#ceva">col - xl - 1200px</a></li>
+								<li><a href="#ceva">col</a></li>
+								<li><a href="#ceva">no-gutters</a></li>
+								<li><a href="#ceva">offset </a></li>
+								<li><a href="#ceva">push</a></li>
+								<li><a href="#ceva">pull</a></li>
+								<li><a href="#ceva">nested collumns</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Images">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseImages" href="#collapseImages" aria-expanded="false" aria-controls="collapseImages">
+							<div class="jcorgFilterTextChild">Images</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseImages" class="collapse" role="tabpanel" aria-labelledby="Images">
+						<div class="card-block">
+							<ul>
+								<li><a href="#ceva">img-fluid</a></li>
+								<li><a href="#ceva">img-thumbnail</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Jumbotron">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseJumbotron" href="#collapseJumbotron" aria-expanded="false" aria-controls="collapseJumbotron">
+							<div class="jcorgFilterTextChild">Jumbotron</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseJumbotron" class="collapse" role="tabpanel" aria-labelledby="Jumbotron">
+						<div class="card-block">
+							<ul>
+								<li><a href="#ceva">Jumbotron</a></li>
+								<li><a href="#ceva">Jumbotron-fluid</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="ListGroup">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseListGroup" href="#collapseListGroup" aria-expanded="false" aria-controls="collapseListGroup">
+							<div class="jcorgFilterTextChild">List Group</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseListGroup" class="collapse" role="tabpanel" aria-labelledby="ListGroup">
+						<div class="card-block">
+							<ul>
+							  <li><a href="#ceva">list-group</a></li>
+							  <li><a href="#ceva">list-group-item active</a></li>
+							  <li><a href="#ceva">list-group-item disabled</a></li>
+							  <li><a href="#ceva">list-group-item-action</a></li>
+							  <li><a href="#ceva">list-group-item-success</a></li>
+							  <li><a href="#ceva">list-group-item-info</a></li>
+							  <li><a href="#ceva">list-group-item-warning</a></li>
+							  <li><a href="#ceva">list-group-item-danger</a></li>
+							  <li><a href="#ceva">list-group with badges</a></li>
+							  <li><a href="#ceva">list-group with d-flex</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="MediaObjects">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseMediaObjects" href="#collapseMediaObjects" aria-expanded="false" aria-controls="collapseMediaObjects">
+							<div class="jcorgFilterTextChild">Media Objects</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseMediaObjects" class="collapse" role="tabpanel" aria-labelledby="MediaObjects">
+						<div class="card-block">
+							<ul>
+							  <li><a href="#ceva">media</a></li>
+							  <li><a href="#ceva">nested media</a></li>
+							  <li><a href="#ceva">d-flex align-self-start</a></li>
+							  <li><a href="#ceva">d-flex align-self-center</a></li>
+							  <li><a href="#ceva">d-flex align-self-end</a></li>
+							  <li><a href="#ceva">right aligned media</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Modal">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseModal" href="#collapseModal" aria-expanded="false" aria-controls="collapseModal">
+							<div class="jcorgFilterTextChild">Modal</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseModal" class="collapse" role="tabpanel" aria-labelledby="Modal">
+						<div class="card-block">
+							<ul>
+							  <li><a href="#ceva">modal</a></li>
+							  <li><a href="#ceva">modal fade</a></li>
+							  <li><a href="#ceva">modal-lg</a></li>
+							  <li><a href="#ceva">modal-sm</a></li>
+						  	</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Navs">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseNavs" href="#collapseNavs" aria-expanded="false" aria-controls="collapseNavs">
+							<div class="jcorgFilterTextChild">Navs</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseNavs" class="collapse" role="tabpanel" aria-labelledby="Navs">
+						<div class="card-block">
+							<ul>
+							  <li><a href="#ceva">ul.nav</a></li>
+							  <li><a href="#ceva">nav.nav</a></li>
+							  <li><a href="#ceva">nav justify-content-*</a></li>
+							  <li><a href="#ceva">nav flex-collumn</a></li>
+							  <li><a href="#ceva">nav-tabs</a></li>
+							  <li><a href="#ceva">nav-tabs</a></li>
+							  <li><a href="#ceva">nav-fill</a></li>
+							  <li><a href="#ceva">nav.justified</a></li>
+							  <li><a href="#ceva">nav with flex utils </a></li>
+							  <li><a href="#ceva">nav-tabs with dropdown</a></li>
+							  <li><a href="#ceva">nav-pills with dropdown</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Pagination">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapsePagination" href="#collapsePagination" aria-expanded="false" aria-controls="collapsePagination">
+							<div class="jcorgFilterTextChild">Pagination</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapsePagination" class="collapse" role="tabpanel" aria-labelledby="Pagination">
+						<div class="card-block">
+							<ul>
+							  <li><a href="#ceva">pagination</a></li>
+							  <li><a href="#ceva">page-item disabled</a></li>
+							  <li><a href="#ceva">page-item active</a></li>
+							  <li><a href="#ceva">pagination-lg</a></li>
+							  <li><a href="#ceva">pagination-sm</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Popover">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapsePopover" href="#collapsePopover" aria-expanded="false" aria-controls="collapsePopover">
+							<div class="jcorgFilterTextChild">Popover</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapsePopover" class="collapse" role="tabpanel" aria-labelledby="Popover">
+						<div class="card-block">
+							<ul>
+							  <li><a href="#ceva">popovers</a></li>
+							  <li><a href="#ceva">dismissible popover</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Progress">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseProgress" href="#collapseProgress" aria-expanded="false" aria-controls="collapseProgress">
+							<div class="jcorgFilterTextChild">Progress</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseProgress" class="collapse" role="tabpanel" aria-labelledby="Progress">
+						<div class="card-block">
+							<ul>
+							  <li><a href="#ceva">progress</a></li>
+							  <li><a href="#ceva">progress-bar</a></li>
+							  <li><a href="#ceva">progress-bar with label</a></li>
+							  <li><a href="#ceva">progress-bar with height</a></li>
+							  <li><a href="#ceva">progress-bar bg-*</a></li>
+							  <li><a href="#ceva">multiple progress_bar</a></li>
+							  <li><a href="#ceva">progress-bar-striped</a></li>
+							  <li><a href="#ceva">progress-bar-striped bg-*</a></li>
+							  <li><a href="#ceva">progress-bar-animated</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="ResponsiveUtilities">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseResponsiveUtilities" href="#collapseResponsiveUtilities" aria-expanded="false" aria-controls="collapseResponsiveUtilities">
+							<div class="jcorgFilterTextChild">Responsive Utilities</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseResponsiveUtilities" class="collapse" role="tabpanel" aria-labelledby="ResponsiveUtilities">
+						<div class="card-block">
+							<ul>
+							  <li><a href="#ceva">hidden-*-down</a></li>
+							  <li><a href="#ceva">hidden-*-up</a></li>
+							  <li><a href="#ceva">visible-print-block</a></li>
+							  <li><a href="#ceva">visible-print-inline</a></li>
+							  <li><a href="#ceva">visible-print-inline-block</a></li>
+							  <li><a href="#ceva">hidden-print</a></li>
+						</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Scrollspy">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseScrollspy" href="#collapseScrollspy" aria-expanded="false" aria-controls="collapseScrollspy">
+							<div class="jcorgFilterTextChild">Scrollspy</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseScrollspy" class="collapse" role="tabpanel" aria-labelledby="Scrollspy">
+						<div class="card-block">
+							<ul>
+							  <li><a href="#ceva">data-spy</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Tables">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseTables" href="#collapseTables" aria-expanded="false" aria-controls="collapseTables">
+							<div class="jcorgFilterTextChild">Tables</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseTables" class="collapse" role="tabpanel" aria-labelledby="Tables">
+						<div class="card-block">
+							<ul>
+							  <li><a href="#ceva">table</a></li>
+							  <li><a href="#ceva">table-inverse</a></li>
+							  <li><a href="#ceva">thead-inverse</a></li>
+							  <li><a href="#ceva">thead-default</a></li>
+							  <li><a href="#ceva">table-strped</a></li>
+							  <li><a href="#ceva">table-bordered</a></li>
+							  <li><a href="#ceva">table-hover</a></li>
+							  <li><a href="#ceva">table-sm</a></li>
+							  <li><a href="#ceva">table-responsive</a></li>
+							  <li><a href="#ceva">table-reflow</a></li>
+							  <li><a href="#ceva">table-active</a></li>
+							  <li><a href="#ceva">table-success</a></li>
+							  <li><a href="#ceva">table-info</a></li>
+							  <li><a href="#ceva">table-warning</a></li>
+							  <li><a href="#ceva">table-danger</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Tooltips">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseTooltips" href="#collapseTooltips" aria-expanded="false" aria-controls="collapseTooltips">
+							<div class="jcorgFilterTextChild">Tooltips</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseTooltips" class="collapse" role="tabpanel" aria-labelledby="headingTooltips">
+						<div class="card-block">
+							<ul>
+							  <li><a href="#ceva">tooltip</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="Typography">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseTypography" href="#collapseTypography" aria-expanded="false" aria-controls="collapseTypography">
+							<div class="jcorgFilterTextChild">Typography</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseTypography" class="collapse" role="tabpanel" aria-labelledby="Typography">
+						<div class="card-block">
+							<ul>
+							  <li><a href="#ceva">display-# (1-4)</a></li>
+							  <li><a href="#ceva">lead</a></li>
+							  <li><a href="#ceva">blockquote</a></li>
+							  <li><a href="#ceva">blockquote-footer</a></li>
+							  <li><a href="#ceva">blockquote-reverse</a></li>
+							  <li><a href="#ceva">list-unstyled</a></li>
+							  <li><a href="#ceva">list-inline</a></li>
+							  <li><a href="#ceva">dl-horizontal</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+				<div class="grid-item">
+					<div class="card card-collapse">
+					  <div class="card-header" role="tab" id="UtilityClasses">
+						<h5 class="mb-0">
+						  <a class="collapsed" data-toggle="collapse" data-target="#collapseUtilityClasses" href="#collapseUtilityClasses" aria-expanded="false" aria-controls="collapseUtilityClasses">
+							<div class="jcorgFilterTextChild">Utility Classes</div>
+							<i class="material-icons">keyboard_arrow_down</i>
+						  </a>
+						</h5>
+					  </div>
+					  <div id="collapseUtilityClasses" class="collapse" role="tabpanel" aria-labelledby="UtilityClasses">
+						<div class="card-block">
+							<ul>
+							  <li><a href="#ceva">align-*</a></li>
+							  <li><a href="#ceva">bg-primary</a></li>
+							  <li><a href="#ceva">bg-success</a></li>
+							  <li><a href="#ceva">bg-info</a></li>
+							  <li><a href="#ceva">bg-warning</a></li>
+							  <li><a href="#ceva">bg-danger</a></li>
+							  <li><a href="#ceva">bg-inverse</a></li>
+							  <li><a href="#ceva">bg-faded</a></li>
+							  <li><a href="#ceva">clearfix</a></li>
+							  <li><a href="#ceva">close</a></li>
+							  <li><a href="#ceva">d-block</a></li>
+							  <li><a href="#ceva">d-inline</a></li>
+							  <li><a href="#ceva">d-inline-block</a></li>
+							  <li><a href="#ceva">embed-responsive</a></li>
+							  <li><a href="#ceva">float-*-left</a></li>
+							  <li><a href="#ceva">float-*-right</a></li>
+							  <li><a href="#ceva">float-*-none</a></li>
+							  <li><a href="#ceva">font_weight-bold</a></li>
+							  <li><a href="#ceva">font-weight-normal</a></li>
+							  <li><a href="#ceva">font-italic</a></li>
+							  <li><a href="#ceva">invisible</a></li>
+							  <li><a href="#ceva">pos-f-t</a></li>
+							  <li><a href="#ceva">rounded</a></li>
+							  <li><a href="#ceva">rounded-circle</a></li>
+							  <li><a href="#ceva">rounded-*</a></li>
+							  <li><a href="#ceva">sr-only</a></li>
+							  <li><a href="#ceva">sr-only-focusable</a></li>
+							  <li><a href="#ceva">text-justify</a></li>
+							  <li><a href="#ceva">text-nowrap</a></li>
+							  <li><a href="#ceva">text-*-left</a></li>
+							  <li><a href="#ceva">text-*-right</a></li>
+							  <li><a href="#ceva">text-*-center</a></li>
+							  <li><a href="#ceva">text-lowercase</a></li>
+							  <li><a href="#ceva">text-uppercase</a></li>
+							  <li><a href="#ceva">text-capitalize</a></li>
+							  <li><a href="#ceva">text-muted</a></li>
+							  <li><a href="#ceva">text-primary</a></li>
+							  <li><a href="#ceva">text-success</a></li>
+							  <li><a href="#ceva">text-info</a></li>
+							  <li><a href="#ceva">text-warning</a></li>
+							  <li><a href="#ceva">text-danger</a></li>
+							  <li><a href="#ceva">text-white</a></li>
+							  <li><a href="#ceva">text-hide</a></li>
+							  <li><a href="#ceva">w-100</a></li>
+							  <li><a href="#ceva">h-100</a></li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</body>
+	<!--   Core JS Files   -->
+	<script src="assets/js/core/jquery.3.2.0.min.js" type="text/javascript"></script>
+    <script src="assets/js/core/tether.min.js" type="text/javascript"></script>
+	<script src="assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+
+    <script src="assets/js/material.min.js" type="text/javascript"></script>
+
+	<!--  Plugin for the Wizard -->
+	<script src="assets/js/bs4-cheatsheet.js"></script>
+	<!-- Plugin for Search -->
+	<script src="assets/js/plugins/jcfilter.min.js"></script>
+	<!-- Plugin for Cards -->
+	<script src="assets/js/plugins/masonry.pkgd.min.js"></script>
+</html>
