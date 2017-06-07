@@ -129,6 +129,7 @@
     width: 100%;
     padding: 10px 15px;
     position: fixed;
+    overflow: scroll;
     bottom: 0;
     transform: translate3d(0,280px,0);
     background-color: gray;
@@ -160,7 +161,7 @@
         height: 200px;
         max-height: 200px;
 
-        h5{
+        > h5{
             color: #fff;
         }
     }
@@ -185,14 +186,27 @@
     #return{
         background-color: #fff;
         padding: 10px;
+        overflow: scroll;
     }
 }
-
 
 @media screen and (max-width: 768px) {
     .col-md-3{
         &:before{
             display: none;
         }
+    }
+
+    .editor-left,
+    .return-right{
+        width: 100% !important;
+    }
+
+    .editor-left{
+        margin-bottom:100px;
+    }
+
+    #return{
+        margin-bottom: 10px !important;
     }
 }

@@ -92,10 +92,8 @@ $(document).on('click', '#collapse-all', function(){
 });
 
 $(document).on('click', '#new', function(){
-    if($('.card-collapse.active').length == 0){
-        $('.card-collapse').addClass('active');
-        $('.card-collapse .card-header').siblings('.collapse').addClass('show');
-    }
+    $('.card-collapse').addClass('active');
+    $('.card-collapse .card-header').siblings('.collapse').addClass('show');
 
     $('body').toggleClass('show-highlight');
 
@@ -106,7 +104,7 @@ $(document).on('click', '#new', function(){
     }
 
 
-    $('#expand-all').html('collapse-all').attr('id', 'collapse-all').attr('class', 'btn btn-info');
+    $('#expand-all').html('Collapse-all').attr('id', 'collapse-all').attr('class', 'btn btn-info');
 });
 
 $(document).on('click', '#close', function(){
@@ -116,25 +114,28 @@ $(document).on('click', '#close', function(){
 $(document).on('click', '.card-block li > a', function(){
     $html_container = $(this).siblings('.html-code');
 
-        var html_code = $html_container.html();
-        console.log('intru in if')
-        // $('.editor-preview #editor').html(html_code);
+    $('.card-block').find('a').removeClass('active');
+    $(this).addClass('active');
 
-        $('.container-editor').addClass('open');
+    var html_code = $html_container.html();
+    console.log('intru in if')
+    // $('.editor-preview #editor').html(html_code);
 
-        editor = ace.edit("editor");
-        editor.setTheme("ace/theme/twilight");
-        editor.session.setMode("ace/mode/html");
+    $('.container-editor').addClass('open');
 
-        editor.setValue(html_code);
+    editor = ace.edit("editor");
+    editor.setTheme("ace/theme/twilight");
+    editor.session.setMode("ace/mode/html");
 
-        function showHTML() {
-           $('#return').html(editor.getValue());
-           console.log('intru in functie');
-        }
+    editor.setValue(html_code);
 
-        editor.on("input", showHTML);
-        showHTML();
+    function showHTML() {
+       $('#return').html(editor.getValue());
+       console.log('intru in functie');
+    }
+
+    editor.on("input", showHTML);
+    showHTML();
 });
 
 

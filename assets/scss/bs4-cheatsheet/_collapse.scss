@@ -80,7 +80,8 @@
                         transition: background-color 100ms linear, color 100ms linear;
 
                         &:hover,
-                        &:focus{
+                        &:focus,
+                        &.active{
                             background-color: rgba(220,220,220, .425);
                         }
                     }
