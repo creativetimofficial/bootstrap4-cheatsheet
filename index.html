@@ -20,6 +20,7 @@
     <link href="assets/css/material-kit.css" rel="stylesheet" />
 	<link href="assets/css/bs4-cheatsheet.css" rel="stylesheet" />
 
+	<script src="assets/js/core/jquery.3.2.0.min.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -223,7 +224,6 @@
 									  <div class="jcorgFilterTextChild">badge-danger</div>
 								  </a>
 <div class="html-code"><span class="badge badge-danger">Danger</span></div>
->>>>>>> 1cce0fce46ae667bd911b9ec94b62dd08e914715
 								  </li>
 						        </ul>
 						    </div>
@@ -1089,56 +1089,14 @@
                             <div class="card-block">
                               	<ul>
                               	   	<li>
-										<a href="#ceva">
+										<a href="#ceva" data-html="#collapse-html">
 											<div class="jcorgFilterTextChild">Collapse</div>
 										</a>
-<div class="html-code"><p><a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Link with href
-  </a>
-  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Button with data-target
-  </button>
-</p>
-<div class="collapse" id="collapseExample">
-  <div class="card card-block">
-    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-  </div>
-</div>
-<script>$('.collapse').collapse()</script></div>
 									</li>
 								   	<li>
-										<a href="#ceva">
+										<a href="#ceva" data-html="#accordion-html">
 											<div class="jcorgFilterTextChild">Accordion</div>
 										</a>
-<div class="html-code"><div id="accordion" role="tablist" aria-multiselectable="true"><div class="card">
-<div class="card-header" role="tab" id="headingOne">
-  <h5 class="mb-0">
-    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-      Collapsible Group Item #1
-    </a>
-  </h5>
-</div>
-
-<div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
-  <div class="card-block">
-    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-  </div>
-</div>
-</div>
-<div class="card">
-<div class="card-header" role="tab" id="headingTwo">
-  <h5 class="mb-0">
-    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-      Collapsible Group Item #2
-    </a>
-  </h5>
-</div>
-<div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-  <div class="card-block">
-    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-  </div>
-</div>
-</div></div></div>
 									</li>
                               	</ul>
                             </div>
@@ -3975,7 +3933,7 @@ $(function(){
 										  <div class="jcorgFilterTextChild">embed-responsive</div>
 									  </a>
 <div class="html-code"><div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="//www.youtube.com/embed/48OJbbI0DfE" allowfullscreen></iframe>
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/48OJbbI0DfE" allowfullscreen></iframe>
 </div></div>
 								  </li>
 								  <li class="bootstrap4-new">
@@ -4247,9 +4205,66 @@ $(function(){
 		    </div>
 		</footer>
     </div>
+
+
+	<div class="html-code" id="collapse-html"><p><a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+	    Link with href
+	  </a>
+	  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+	    Button with data-target
+	  </button>
+	</p>
+	<div class="collapse" id="collapseExample">
+	  <div class="card card-block">
+	    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+	  </div>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+			$('#collapseExample').collapse();
+		});
+	</script>
+	</div>
+
+	<div class="html-code" id="accordion-html"><div id="accordion" role="tablist" aria-multiselectable="true"><div class="card">
+	<div class="card-header" role="tab" id="headingOne">
+	  <h5 class="mb-0">
+	    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	      Collapsible Group Item #1
+	    </a>
+	  </h5>
+	</div>
+
+	<div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+	  <div class="card-block">
+	    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+	  </div>
+	</div>
+	</div>
+	<div class="card">
+	<div class="card-header" role="tab" id="headingTwo">
+	  <h5 class="mb-0">
+	    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+	      Collapsible Group Item #2
+	    </a>
+	  </h5>
+	</div>
+	<div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+	  <div class="card-block">
+	    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+	  </div>
+	</div>
+	</div></div>
+
+	<script>
+		$(document).ready(function(){
+			$('#collapseOne, #collapseTwo').collapse();
+		});
+	</script>
+</div>
 </body>
 	<!--   Core JS Files   -->
-	<script src="assets/js/core/jquery.3.2.0.min.js" type="text/javascript"></script>
     <script src="assets/js/core/tether.min.js" type="text/javascript"></script>
 	<script src="assets/js/core/bootstrap.min.js" type="text/javascript"></script>
 

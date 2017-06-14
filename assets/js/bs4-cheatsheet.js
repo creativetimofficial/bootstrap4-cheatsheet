@@ -1,7 +1,7 @@
 var card_collapse = 0;
 
 $(document).ready(function(){
-    initCardCollapse();
+    // initCardCollapse();
 
     //  Activate the Tooltips
     $('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
@@ -112,7 +112,13 @@ $(document).on('click', '#close', function(){
 });
 
 $(document).on('click', '.card-block li > a', function(){
-    $html_container = $(this).siblings('.html-code');
+    var attr = $(this).attr('data-html');
+
+    if(typeof attr !== typeof undefined && attr !== false){
+        $html_container = $($(this).data('html'));
+    } else {
+        $html_container = $(this).siblings('.html-code');
+    }
 
     $('.card-block').find('a').removeClass('active');
     $(this).addClass('active');
@@ -143,7 +149,7 @@ $(document).on('click', '.card-block li > a', function(){
 
 $("#filter").keyup(function(){
     $('.card-collapse').removeClass('active');
-    $('.collapse').removeClass('show');
+    $('.card-header').siblings('.collapse').removeClass('show');
     $('.card-collapse').removeClass('hidden');
     setTimeout(function(){
         if($('.jcorgFilterTextChild').children('span').length != 0){
@@ -153,10 +159,10 @@ $("#filter").keyup(function(){
                     $(this).children('span').closest('.card-collapse').addClass('active');
                     $(this).children('span').closest('.card-header').siblings('.collapse').addClass('show');
                     $(this).children('span').closest('.card-block').closest('.collapse').addClass('show');
-                } else {
-                    $(this).closest('.card-collapse').addClass('hidden');
                 }
             });
+
+            $('.card-collapse:not(.active)').addClass('hidden');
             SetCard($('.card-collapse.active'));
         }else{
             SetCard(card_collapse);
@@ -195,13 +201,21 @@ function SetCard(cards){
 }
 
 function initCardCollapse(){
-    $('.card.card-collapse').find('.collapse.show').each(function(){
+    $('.card.card-collapse > .collapse.show').each(function(){
         $(this).parent().addClass('active');
     });
 
-    $('.card.card-collapse').on('click', function(){
-        $(this).addClass('active');
+    // $('.card.card-collapse').on('click', function(){
+    //     $(this).addClass('active');
+    // }).on('hidden.bs.collapse', function(){
+    //     console.log("ajunge");
+    //     $(this).removeClass('active');
+    // });
+
+    $('.card.card-collapse .collapse').on('show.bs.collapse', function(){
+        $(this).parent().addClass('active');
     }).on('hidden.bs.collapse', function(){
-        $(this).removeClass('active');
+        console.log("ajunge");
+        $(this).parent().removeClass('active');
     });
 }

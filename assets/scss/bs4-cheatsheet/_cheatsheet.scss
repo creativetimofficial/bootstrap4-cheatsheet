@@ -178,6 +178,7 @@
     #return{
         height: 100%;
         width: 100%;
+        position: relative;
         margin: 0;
         border-radius: 10px;
         box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.5);
@@ -187,6 +188,11 @@
         background-color: #fff;
         padding: 10px;
         overflow: scroll;
+
+        .navbar.fixed-top,
+        .navbar.fixed-bottom{
+            position: absolute;
+        }
     }
 }
 

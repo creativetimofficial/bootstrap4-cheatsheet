@@ -246,6 +246,7 @@
 .container-editor #return {
   height: 100%;
   width: 100%;
+  position: relative;
   margin: 0;
   border-radius: 10px;
   box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.5);
@@ -254,6 +255,10 @@
   background-color: #fff;
   padding: 10px;
   overflow: scroll;
+}
+.container-editor #return .navbar.fixed-top,
+.container-editor #return .navbar.fixed-bottom {
+  position: absolute;
 }
 
 @media screen and (max-width: 768px) {
