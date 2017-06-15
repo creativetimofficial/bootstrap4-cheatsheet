@@ -1,10 +1,14 @@
 var card_collapse = 0;
 
 $(document).ready(function(){
-    initCardCollapse();
+    $.material.init();
 
     //  Activate the Tooltips
     $('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
+
+    if($(window).width() < 991 && $('.navbar').hasClass('bg-transparent')){
+        $('.navbar').removeClass('bg-transparent').addClass('bg-faded');
+    }
 
     if($('.twitter-sharrre-nav').length != 0){
         $('.twitter-sharrre-nav').sharrre({
@@ -58,6 +62,23 @@ $(document).ready(function(){
         });
     }
 
+    if($('.pinterest-sharrre-nav').length != 0){
+        $('.pinterest-sharrre-nav').sharrre({
+          share: {
+            pinterest: true
+          },
+          enableCounter: false,
+          enableHover: false,
+          enableTracking: true,
+          click: function(api, options){
+            api.simulateClick();
+            api.openPopup('pinterest');
+          },
+          template: '<i class="fa fa-linkedin"></i><p class="hidden-lg-up">LinkedIn</p>',
+          url: 'http://demos.creative-tim.com/now-ui-kit/index.html'
+        });
+    }
+
     var $input = $('.main .brand').find("#filter");
     $input.jcOnPageFilter({
         animateHideNShow: true,
@@ -73,9 +94,17 @@ $(document).ready(function(){
     SetCard(card_collapse);
 });
 
+$(window).on("resize", function(){
+    if($(window).width() < 992){
+        $('.navbar').removeClass('bg-transparent').addClass('bg-faded');
+    } else {
+        $('.navbar').addClass('bg-transparent').removeClass('bg-faded');
+    }
+});
+
 $(document).on('click', '#expand-all', function(){
     $(this).html('Collapse-all');
-    $(this).attr('id', 'collapse-all').attr('class', 'btn btn-info');
+    $(this).attr('id', 'collapse-all').attr('class', 'btn btn-info btn-block');
 
     $('.card-collapse').addClass('active');
     $('.card-collapse .card-header').siblings('.collapse').addClass('show');
@@ -83,7 +112,7 @@ $(document).on('click', '#expand-all', function(){
 
 $(document).on('click', '#collapse-all', function(){
     $(this).html('Expand-all');
-    $(this).attr('id', 'expand-all').attr('class', 'btn btn-default');
+    $(this).attr('id', 'expand-all').attr('class', 'btn btn-default btn-block');
 
     if($('.card-collapse.active').length != 0){
         $('.card-collapse').removeClass('active');
@@ -92,21 +121,19 @@ $(document).on('click', '#collapse-all', function(){
 });
 
 $(document).on('click', '#new', function(){
-    if($('.card-collapse.active').length == 0){
-        $('.card-collapse').addClass('active');
-        $('.card-collapse .card-header').siblings('.collapse').addClass('show');
-    }
+    $('.card-collapse').addClass('active');
+    $('.card-collapse .card-header').siblings('.collapse').addClass('show');
 
     $('body').toggleClass('show-highlight');
 
     if($('body').hasClass('show-highlight')){
-        $(this).attr('class', 'btn btn-info');
+        $(this).attr('class', 'btn btn-info btn-block');
     } else{
-        $(this).attr('class', 'btn btn-default');
+        $(this).attr('class', 'btn btn-default btn-block');
     }
 
 
-    $('#expand-all').html('collapse-all').attr('id', 'collapse-all').attr('class', 'btn btn-info');
+    $('#expand-all').html('Collapse-all').attr('id', 'collapse-all').attr('class', 'btn btn-info btn-block');
 });
 
 $(document).on('click', '#close', function(){
@@ -114,27 +141,34 @@ $(document).on('click', '#close', function(){
 });
 
 $(document).on('click', '.card-block li > a', function(){
-    $html_container = $(this).siblings('.html-code');
+    var attr = $(this).attr('data-html');
 
-        var html_code = $html_container.html();
-        console.log('intru in if')
-        // $('.editor-preview #editor').html(html_code);
+    if(typeof attr !== typeof undefined && attr !== false){
+        $html_container = $($(this).data('html'));
+    } else {
+        $html_container = $(this).siblings('.html-code');
+    }
 
-        $('.container-editor').addClass('open');
+    $('.card-block').find('a').removeClass('active');
+    $(this).addClass('active');
 
-        editor = ace.edit("editor");
-        editor.setTheme("ace/theme/twilight");
-        editor.session.setMode("ace/mode/html");
+    var html_code = $html_container.html();
+    // $('.editor-preview #editor').html(html_code);
 
-        editor.setValue(html_code);
+    $('.container-editor').addClass('open');
 
-        function showHTML() {
-           $('#return').html(editor.getValue());
-           console.log('intru in functie');
-        }
+    editor = ace.edit("editor");
+    editor.setTheme("ace/theme/twilight");
+    editor.session.setMode("ace/mode/html");
 
-        editor.on("input", showHTML);
-        showHTML();
+    editor.setValue(html_code);
+
+    function showHTML() {
+       $('#return').html(editor.getValue());
+    }
+
+    editor.on("input", showHTML);
+    showHTML();
 });
 
 
@@ -142,7 +176,7 @@ $(document).on('click', '.card-block li > a', function(){
 
 $("#filter").keyup(function(){
     $('.card-collapse').removeClass('active');
-    $('.collapse').removeClass('show');
+    $('.card-header').siblings('.collapse').removeClass('show');
     $('.card-collapse').removeClass('hidden');
     setTimeout(function(){
         if($('.jcorgFilterTextChild').children('span').length != 0){
@@ -152,10 +186,10 @@ $("#filter").keyup(function(){
                     $(this).children('span').closest('.card-collapse').addClass('active');
                     $(this).children('span').closest('.card-header').siblings('.collapse').addClass('show');
                     $(this).children('span').closest('.card-block').closest('.collapse').addClass('show');
-                } else {
-                    $(this).closest('.card-collapse').addClass('hidden');
                 }
             });
+
+            $('.card-collapse:not(.active)').addClass('hidden');
             SetCard($('.card-collapse.active'));
         }else{
             SetCard(card_collapse);
@@ -166,26 +200,21 @@ $("#filter").keyup(function(){
 
 function SetCard(cards){
     $('.card-collapse.active').remove();
-    console.log(cards);
 
     var nr = 1;
 
     cards.each(function(){
         if(nr == 1){
             $('#col1').append($(this));
-            console.log('intra pe 1');
             nr = 2;
         } else if(nr == 2){
             $('#col2').append($(this));
-            console.log('intra pe 2');
             nr = 3;
         } else if(nr == 3){
             $('#col3').append($(this));
-            console.log('intra pe 3');
             nr = 4;
         } else if(nr == 4){
             $('#col4').append($(this));
-            console.log('intra pe 4');
             nr = 1;
         }
     });
@@ -194,13 +223,14 @@ function SetCard(cards){
 }
 
 function initCardCollapse(){
-    $('.card.card-collapse').find('.collapse.show').each(function(){
+    $('.card.card-collapse > .collapse.show').each(function(){
         $(this).parent().addClass('active');
     });
 
-    $('.card.card-collapse').on('click', function(){
-        $(this).addClass('active');
+    $('.card.card-collapse .collapse').on('show.bs.collapse', function(){
+        $(this).parent().addClass('active');
     }).on('hidden.bs.collapse', function(){
-        $(this).removeClass('active');
+        console.log("ajunge");
+        $(this).parent().removeClass('active');
     });
 }

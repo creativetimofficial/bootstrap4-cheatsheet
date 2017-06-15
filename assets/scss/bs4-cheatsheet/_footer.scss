@@ -1,6 +1,7 @@
 .footer{
     color: #ffffff;
     background-color: transparent;
+    padding: 10px 15px;
 
     nav{
         display: inline-block;
@@ -30,8 +31,15 @@
     }
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 991px){
     .footer .copyright {
         float: right;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .footer nav {
+        display: block;
+        float: none;
     }
 }
