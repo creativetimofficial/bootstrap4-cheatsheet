@@ -2828,8 +2828,9 @@ footer ul li a {
   position: relative;
   display: block;
 }
-footer ul li a:hover {
-  text-decoration: none;
+footer ul li a:hover,
+footer ul li a:focus{
+  color: #fff;
 }
 footer ul li .btn {
   margin: 0;

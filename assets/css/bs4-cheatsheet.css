@@ -236,7 +236,7 @@
   background-color: transparent;
   color: #fff;
 }
-.bg-transparent .navbar-nav .nav-link, .bg-transparent .navbar-brand, .bg-transparent .navbar-toggler, .bg-transparent .navbar-nav .nav-link:focus, .bg-transparent .navbar-nav .nav-link:hover {
+.bg-transparent .navbar-nav .nav-link, .bg-transparent .navbar-brand, .bg-transparent .navbar-brand:focus, .bg-transparent .navbar-brand:hover, .bg-transparent .navbar-toggler, .bg-transparent .navbar-nav .nav-link:focus, .bg-transparent .navbar-nav .nav-link:hover {
   color: #fff;
 }
 
@@ -349,7 +349,8 @@
   clear: both;
   content: " ";
 }
-.footer .copyright > a {
+.footer .copyright > a,
+.footer nav ul li > a > a {
   color: #fff;
 }
 

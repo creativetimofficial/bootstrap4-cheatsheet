@@ -51,17 +51,17 @@ $(document).ready(function(){
         });
     }
 
-    if($('.linkedin-sharrre-nav').length != 0){
-        $('.linkedin-sharrre-nav').sharrre({
+    if($('.google-sharrre-nav').length != 0){
+        $('.google-sharrre-nav').sharrre({
           share: {
-            linkedin: true
+            googlePlus: true
           },
           enableCounter: false,
           enableHover: false,
           enableTracking: true,
           click: function(api, options){
             api.simulateClick();
-            api.openPopup('linkedin');
+            api.openPopup('googlePlus');
           },
           template: '<i class="fa fa-linkedin"></i><p class="hidden-lg-up">LinkedIn</p>',
           url: 'http://demos.creative-tim.com/now-ui-kit/index.html'
@@ -131,19 +131,17 @@ $(document).on('click', '#collapse-all', function(){
 });
 
 $(document).on('click', '#new', function(){
-    $('.card-collapse').addClass('active');
-    $('.card-collapse .card-header').siblings('.collapse').addClass('show');
-
     $('body').toggleClass('show-highlight');
 
     if($('body').hasClass('show-highlight')){
+        $('.card-collapse').addClass('active');
+        $('.card-collapse .card-header').siblings('.collapse').addClass('show');
+
         $(this).attr('class', 'btn btn-info btn-block');
+        $('#expand-all').html('Collapse-all').attr('id', 'collapse-all').attr('class', 'btn btn-info btn-block');
     } else{
         $(this).attr('class', 'btn btn-default btn-block');
     }
-
-
-    $('#expand-all').html('Collapse-all').attr('id', 'collapse-all').attr('class', 'btn btn-info btn-block');
 });
 
 $(document).on('click', '#close', function(){
