@@ -181,9 +181,9 @@
 
 .share-plugin {
   position: fixed;
-  height: 248px;
+  height: auto;
   width: 70px;
-  background-color: white;
+  background-color: #fff;
   left: 0;
   top: 154px;
   border-top-right-radius: 4px;
@@ -198,6 +198,7 @@
   display: block;
   text-align: -webkit-center;
   padding: 19px;
+  transition: background-color 170ms ease-in;
 }
 .share-plugin ul li > a i {
   color: #fff;
@@ -208,15 +209,27 @@
   background-color: #3b5998;
   border-top-right-radius: 3px;
 }
+.share-plugin ul li > a.facebook-sharrre-nav:hover, .share-plugin ul li > a.facebook-sharrre-nav:focus {
+  background-color: #4264aa;
+}
 .share-plugin ul li > a.pinterest-sharrre-nav {
   background-color: #cb2027;
+}
+.share-plugin ul li > a.pinterest-sharrre-nav:hover, .share-plugin ul li > a.pinterest-sharrre-nav:focus {
+  background-color: #dd272f;
 }
 .share-plugin ul li > a.google-sharrre-nav {
   background-color: #dd4b39;
 }
+.share-plugin ul li > a.google-sharrre-nav:hover, .share-plugin ul li > a.google-sharrre-nav:focus {
+  background-color: #e15f4f;
+}
 .share-plugin ul li > a.twitter-sharrre-nav {
   background-color: #00aced;
   border-bottom-right-radius: 3px;
+}
+.share-plugin ul li > a.twitter-sharrre-nav:hover, .share-plugin ul li > a.twitter-sharrre-nav:focus {
+  background-color: #07bbff;
 }
 
 .bg-transparent {

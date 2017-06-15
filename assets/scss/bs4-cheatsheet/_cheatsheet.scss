@@ -101,9 +101,9 @@
 
 .share-plugin{
     position: fixed;
-    height: 248px;
+    height: auto;
     width: 70px;
-    background-color: white;
+    background-color: #fff;
     left: 0;
     top: 154px;
     border-top-right-radius: 4px;
@@ -118,6 +118,7 @@
             display: block;
             text-align: -webkit-center;
             padding: 19px;
+            transition: background-color 170ms ease-in;
 
             i{
                 color: #fff;
@@ -128,19 +129,39 @@
             &.facebook-sharrre-nav{
                 background-color: #3b5998;
                 border-top-right-radius: 3px;
+
+                &:hover,
+                &:focus{
+                    background-color: lighten(#3b5998, 5%);
+                }
             }
 
             &.pinterest-sharrre-nav{
                 background-color: #cb2027;
+
+                &:hover,
+                &:focus{
+                    background-color: lighten(#cb2027, 5%);
+                }
             }
 
             &.google-sharrre-nav{
                 background-color: #dd4b39;
+
+                &:hover,
+                &:focus{
+                    background-color: lighten(#dd4b39, 5%);
+                }
             }
 
             &.twitter-sharrre-nav{
                 background-color: #00aced;
                 border-bottom-right-radius: 3px;
+
+                &:hover,
+                &:focus{
+                    background-color: lighten(#00aced, 5%);
+                }
             }
         }
     }
