@@ -1,10 +1,16 @@
 var card_collapse = 0;
 
 $(document).ready(function(){
-    $.material.init();
-
     //  Activate the Tooltips
     $('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
+
+    $('.brand input').focusin(function(){
+        $(this).parent().addClass('is-focused');
+    }).focusout(function(){
+        $(this).parent().removeClass('is-focused');
+    });
+
+    $('.modal').appendTo('body');
 
     if($(window).width() < 991 && $('.navbar').hasClass('bg-transparent')){
         $('.navbar').removeClass('bg-transparent').addClass('bg-faded');
@@ -93,6 +99,10 @@ $(document).ready(function(){
     card_collapse = $('.card-collapse');
     SetCard(card_collapse);
 });
+
+function materialInit(){
+    $.material.init();
+}
 
 $(window).on("resize", function(){
     if($(window).width() < 992){

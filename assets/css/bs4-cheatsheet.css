@@ -301,6 +301,9 @@
 .container-editor #return .navbar.fixed-bottom {
   position: absolute;
 }
+.container-editor #return .card {
+  max-width: 320px;
+}
 
 @media screen and (max-width: 768px) {
   .col-md-3:before {
