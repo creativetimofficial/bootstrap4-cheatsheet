@@ -182,7 +182,7 @@
 .share-plugin {
   position: fixed;
   height: auto;
-  width: 70px;
+  width: 50px;
   background-color: #fff;
   left: 0;
   top: 154px;
@@ -197,7 +197,7 @@
 .share-plugin ul li > a {
   display: block;
   text-align: -webkit-center;
-  padding: 19px;
+  padding: 13px;
   transition: background-color 170ms ease-in;
 }
 .share-plugin ul li > a i {
