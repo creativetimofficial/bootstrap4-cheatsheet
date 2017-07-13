@@ -327,6 +327,11 @@
     margin-bottom: 10px;
   }
 }
+@media screen and (max-width: 900px) {
+  .share-plugin {
+    display: none;
+  }
+}
 .footer {
   color: #ffffff;
   background-color: transparent;
@@ -335,6 +340,7 @@
 .footer nav {
   display: inline-block;
   float: left;
+  line-height: 2.4;
 }
 .footer ul {
   margin-bottom: 0;
