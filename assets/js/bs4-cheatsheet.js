@@ -24,13 +24,13 @@ $(document).ready(function(){
           enableHover: false,
           enableTracking: true,
           enableCounter: false,
-          buttons: { twitter: {via: 'CreativeTim'}},
+          buttons: { twitter: {via: 'BootstrapBay'}},
           click: function(api, options){
             api.simulateClick();
             api.openPopup('twitter');
           },
           template: '<i class="fa fa-twitter"></i><p class="hidden-lg-up">Twitter</p>',
-          url: 'http://demos.creative-tim.com/now-ui-kit/index.html'
+          url: 'http://bootstrapbay.com/bootstrap4/'
         });
     }
 
@@ -47,7 +47,7 @@ $(document).ready(function(){
             api.openPopup('facebook');
           },
           template: '<i class="fa fa-facebook-square"></i><p class="hidden-lg-up">Facebook</p>',
-          url: 'http://demos.creative-tim.com/now-ui-kit/index.html'
+          url: 'http://bootstrapbay.com/bootstrap4/'
         });
     }
 
@@ -64,7 +64,7 @@ $(document).ready(function(){
             api.openPopup('googlePlus');
           },
           template: '<i class="fa fa-linkedin"></i><p class="hidden-lg-up">LinkedIn</p>',
-          url: 'http://demos.creative-tim.com/now-ui-kit/index.html'
+          url: 'http://bootstrapbay.com/bootstrap4/'
         });
     }
 
@@ -81,7 +81,7 @@ $(document).ready(function(){
             api.openPopup('pinterest');
           },
           template: '<i class="fa fa-linkedin"></i><p class="hidden-lg-up">LinkedIn</p>',
-          url: 'http://demos.creative-tim.com/now-ui-kit/index.html'
+          url: 'http://bootstrapbay.com/bootstrap4/'
         });
     }
 

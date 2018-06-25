@@ -229,7 +229,7 @@
   border-bottom-right-radius: 3px;
 }
 .share-plugin ul li > a.twitter-sharrre-nav:hover, .share-plugin ul li > a.twitter-sharrre-nav:focus {
-  background-color: #07bbff;
+  background-color: #08bbff;
 }
 
 .bg-transparent {
@@ -327,6 +327,11 @@
     margin-bottom: 10px;
   }
 }
+@media screen and (max-width: 900px) {
+  .share-plugin {
+    display: none;
+  }
+}
 .footer {
   color: #ffffff;
   background-color: transparent;
@@ -335,6 +340,7 @@
 .footer nav {
   display: inline-block;
   float: left;
+  line-height: 2.4;
 }
 .footer ul {
   margin-bottom: 0;
